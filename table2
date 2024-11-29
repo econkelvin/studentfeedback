@@ -1,0 +1,13 @@
+*Table 2: OLS Regression - Dependent Variable: Difference Between Expected And Actual Course Grade
+
+reg diff_exp_real first_gen male i.class 
+reg diff_exp_real first_gen male i.class if lecture_type==1
+reg diff_exp_real first_gen male i.class if lecture_type==0
+reg diff_exp_real first_gen male i.class if experiment==1
+reg diff_exp_real first_gen male i.class if experiment==2
+
+reg diff_exp_real first_gen male i.class if experiment==1 & lecture_type==1
+reg diff_exp_real first_gen male i.class if experiment==2 & lecture_type==1
+
+reg diff_exp_real first_gen male i.class if experiment==1 & lecture_type==0
+reg diff_exp_real first_gen male i.class if experiment==2 & lecture_type==0

@@ -1,0 +1,73 @@
+*Table 1: Summary Statistics
+sum male 
+sum male if treatment==1
+sum male if treatment==2
+sum male if treatment==3
+sum male if treatment==4
+sum male if treatment2==1
+sum male if  treatment3==2
+
+sum first_gen
+sum first_gen if  treatment==1
+sum first_gen if  treatment==2
+sum first_gen if  treatment==3
+sum first_gen if  treatment==4
+sum first_gen if  treatment2==1
+sum first_gen if  treatment3==2
+
+tab race_num 
+tab race_num if  treatment==1
+tab race_num if  treatment==2
+tab race_num if  treatment==3
+tab race_num if  treatment==4
+tab race_num if  treatment2==1
+tab race_num if  treatment3==2
+
+sum exam1score 
+sum exam1score if  treatment==1
+sum exam1score if  treatment==2
+sum exam1score if  treatment==3
+sum exam1score if  treatment==4
+sum exam1score if  treatment2==1
+sum exam1score if  treatment3==2
+
+//Generate std dev for race
+sum asian
+sum asian if treatment==1
+sum asian if treatment==2
+sum asian if treatment==3
+sum asian if treatment==4
+sum asian if treatment2==1
+sum asian if treatment3==2
+
+sum black
+sum black if treatment==1
+sum black if treatment==2
+sum black if treatment==3
+sum black if treatment==4
+sum black if treatment2==1
+sum black if treatment3==2
+
+sum hispanic
+sum hispanic if treatment==1
+sum hispanic if treatment==2
+sum hispanic if treatment==3
+sum hispanic if treatment==4
+sum hispanic if treatment2==1
+sum hispanic if treatment3==2
+
+sum white
+sum white if treatment==1
+sum white if treatment==2
+sum white if treatment==3
+sum white if treatment==4
+sum white if treatment2==1
+sum white if treatment3==2
+
+sum other
+sum other if treatment==1
+sum other if treatment==2
+sum other if treatment==3
+sum other if treatment==4
+sum other if treatment2==1
+sum other if treatment3==2

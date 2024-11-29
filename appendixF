@@ -1,0 +1,16 @@
+*Appendix F Table
+
+*Appendix Table F1: Qualitative Analysis - Percentage of Students who Agree or Strongly Agree - Panel A: All Students
+bysort treatment: sum help_feedback 
+bysort treatment: sum study_feedback
+bysort treatment: sum invested_feedback
+
+*Appendix Table F1: Qualitative Analysis - Percentage of Students who Agree or Strongly Agree - Panel B: First-Generation Students
+bysort treatment: sum help_feedback if first_gen==1
+bysort treatment: sum study_feedback if first_gen==1
+bysort treatment: sum invested_feedback if first_gen==1
+
+*Appendix Table F1: Qualitative Analysis - Percentage of Students who Agree or Strongly Agree - Panel C: Continuing-Generation Students
+bysort treatment: sum help_feedback if first_gen==0
+bysort treatment: sum study_feedback if first_gen==0
+bysort treatment: sum invested_feedback if first_gen==0

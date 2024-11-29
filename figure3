@@ -1,0 +1,36 @@
+*Figure 3: Treatment Effect by Level of Optimism in Synchronous Classes: Experiments 1 and 2 (and Appendix Table G18)
+*Figure 3 Panel A: Optimistic Students
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 , vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_midterm
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance<actual_relative_performance) & lecture_type==1 , vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Overoptimistic_grade
+
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 , vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_ps
+
+coefplot Overoptimistic_midterm Overoptimistic_grade Overoptimistic_ps, keep( T3 || FGxT3)    xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+*Figure 3 Panel B: Pessimistic/Accurate Students
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_midterm
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance>=actual_relative_performance) & lecture_type==1 , vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Pessimistic_grade
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1 , vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_ps
+
+coefplot Pessimistic_midterm Pessimistic_grade Pessimistic_ps, keep( T3 || FGxT3)    xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b)

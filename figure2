@@ -1,0 +1,35 @@
+*Figure 2: Differential Effects of Feedback Messages: Experiment 1 (and Appendix Table G16)
+*Figure 2 Panel A: Synchronous Classes
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.race_num if experiment==1 & RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if experiment==1 & RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if experiment==1 & RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T1 || T2 || T3 || FGxT1 || FGxT2 || FGxT3)   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.0000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+*Figure 2 Panel B: Asynchronous Classes
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.race_num if experiment==1 & RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if experiment==1 & RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if experiment==1 & RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T1 || T2 || T3 || FGxT1 || FGxT2 || FGxT3)   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.0000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 

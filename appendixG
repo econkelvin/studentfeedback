@@ -1,0 +1,617 @@
+*Appendix G Tables and Figures
+
+*Appendix Table G2: Summary Statistics of Experiment 1
+sum male if experiment==1
+sum male if experiment==1 & treatment==1
+sum male if experiment==1 & treatment==2
+sum male if experiment==1 & treatment==3
+sum male if experiment==1 & treatment==4
+sum male if experiment==1 & treatment2==1
+sum male if experiment==1 & treatment3==2
+
+sum first_gen if experiment==1
+sum first_gen if experiment==1 & treatment==1
+sum first_gen if experiment==1 & treatment==2
+sum first_gen if experiment==1 & treatment==3
+sum first_gen if experiment==1 & treatment==4
+sum first_gen if experiment==1 & treatment2==1
+sum first_gen if experiment==1 & treatment3==2
+
+tab race_num if experiment==1
+tab race_num if experiment==1 & treatment==1
+tab race_num if experiment==1 & treatment==2
+tab race_num if experiment==1 & treatment==3
+tab race_num if experiment==1 & treatment==4
+tab race_num if experiment==1 & treatment2==1
+tab race_num if experiment==1 & treatment3==2
+
+
+sum exam1score if experiment==1
+sum exam1score if experiment==1 & treatment==1
+sum exam1score if experiment==1 & treatment==2
+sum exam1score if experiment==1 & treatment==3
+sum exam1score if experiment==1 & treatment==4
+sum exam1score if experiment==1 & treatment2==1
+sum exam1score if experiment==1 & treatment3==2
+
+//std deviation for race variables
+sum asian if experiment==1
+sum asian if experiment==1 & treatment==1
+sum asian if experiment==1 & treatment==2
+sum asian if experiment==1 & treatment==3
+sum asian if experiment==1 & treatment==4
+sum asian if experiment==1 & treatment2==1
+sum asian if experiment==1 & treatment3==2
+
+
+sum black if experiment==1
+sum black if experiment==1 & treatment==1
+sum black if experiment==1 & treatment==2
+sum black if experiment==1 & treatment==3
+sum black if experiment==1 & treatment==4
+sum black if experiment==1 & treatment2==1
+sum black if experiment==1 & treatment3==2
+
+
+sum hispanic if experiment==1
+sum hispanic if experiment==1 & treatment==1
+sum hispanic if experiment==1 & treatment==2
+sum hispanic if experiment==1 & treatment==3
+sum hispanic if experiment==1 & treatment==4
+sum hispanic if experiment==1 & treatment2==1
+sum hispanic if experiment==1 & treatment3==2
+
+
+sum white if experiment==1
+sum white if experiment==1 & treatment==1
+sum white if experiment==1 & treatment==2
+sum white if experiment==1 & treatment==3
+sum white if experiment==1 & treatment==4
+sum white if experiment==1 & treatment2==1
+sum white if experiment==1 & treatment3==2
+
+sum other if experiment==1
+sum other if experiment==1 & treatment==1
+sum other if experiment==1 & treatment==2
+sum other if experiment==1 & treatment==3
+sum other if experiment==1 & treatment==4
+sum other if experiment==1 & treatment2==1
+sum other if experiment==1 & treatment3==2
+
+
+*Appendix Table G3: Summary Statistics of Experiment 2
+sum male if experiment==2
+sum male if experiment==2 & treatment==1
+sum male if experiment==2 & treatment==2
+sum male if experiment==2 & treatment==3
+sum male if experiment==2 & treatment==4
+sum male if experiment==2 & treatment2==1
+sum male if experiment==2 & treatment3==2
+
+sum first_gen if experiment==2
+sum first_gen if experiment==2 & treatment==1
+sum first_gen if experiment==2 & treatment==2
+sum first_gen if experiment==2 & treatment==3
+sum first_gen if experiment==2 & treatment==4
+sum first_gen if experiment==2 & treatment2==1
+sum first_gen if experiment==2 & treatment3==2
+
+tab race_num if experiment==2
+tab race_num if experiment==2 & treatment==1
+tab race_num if experiment==2 & treatment==2
+tab race_num if experiment==2 & treatment==3
+tab race_num if experiment==2 & treatment==4
+tab race_num if experiment==2 & treatment2==1
+tab race_num if experiment==2 & treatment3==2
+
+sum exam1score if experiment==2
+sum exam1score if experiment==2 & treatment==1
+sum exam1score if experiment==2 & treatment==2
+sum exam1score if experiment==2 & treatment==3
+sum exam1score if experiment==2 & treatment==4
+sum exam1score if experiment==2 & treatment2==1
+sum exam1score if experiment==2 & treatment3==2
+
+//std. deviation for race variables
+sum asian if experiment==2
+sum asian if experiment==2 & treatment==1
+sum asian if experiment==2 & treatment==2
+sum asian if experiment==2 & treatment==3
+sum asian if experiment==2 & treatment==4
+sum asian if experiment==2 & treatment2==1
+sum asian if experiment==2 & treatment3==2
+
+sum black if experiment==2
+sum black if experiment==2 & treatment==1
+sum black if experiment==2 & treatment==2
+sum black if experiment==2 & treatment==3
+sum black if experiment==2 & treatment==4
+sum black if experiment==2 & treatment2==1
+sum black if experiment==2 & treatment3==2
+
+sum hispanic if experiment==2
+sum hispanic if experiment==2 & treatment==1
+sum hispanic if experiment==2 & treatment==2
+sum hispanic if experiment==2 & treatment==3
+sum hispanic if experiment==2 & treatment==4
+sum hispanic if experiment==2 & treatment2==1
+sum hispanic if experiment==2 & treatment3==2
+
+sum white if experiment==2
+sum white if experiment==2 & treatment==1
+sum white if experiment==2 & treatment==2
+sum white if experiment==2 & treatment==3
+sum white if experiment==2 & treatment==4
+sum white if experiment==2 & treatment2==1
+sum white if experiment==2 & treatment3==2
+
+sum other if experiment==2
+sum other if experiment==2 & treatment==1
+sum other if experiment==2 & treatment==2
+sum other if experiment==2 & treatment==3
+sum other if experiment==2 & treatment==4
+sum other if experiment==2 & treatment2==1
+sum other if experiment==2 & treatment3==2
+
+
+
+*Appendix Table G4: Summary Statistics of Synchronous Lectures
+preserve
+ keep if lecture_type==1
+ sum male  
+ sum male if treatment==1 
+ sum male if  treatment==2
+ sum male if  treatment==3
+ sum male if  treatment==4
+ sum male if  treatment2==1
+ sum male if  treatment3==2
+
+ sum first_gen 
+ sum first_gen if  treatment==1
+ sum first_gen if  treatment==2
+ sum first_gen if  treatment==3
+ sum first_gen if  treatment==4
+ sum first_gen if  treatment2==1
+ sum first_gen if  treatment3==2
+
+ tab race_num 
+ tab race_num if  treatment==1
+ tab race_num if  treatment==2
+ tab race_num if  treatment==3
+ tab race_num if  treatment==4
+ tab race_num if  treatment2==1
+ tab race_num if  treatment3==2
+
+ sum exam1score 
+ sum exam1score if  treatment==1
+ sum exam1score if  treatment==2
+ sum exam1score if  treatment==3
+ sum exam1score if  treatment==4
+ sum exam1score if  treatment2==1
+ sum exam1score if  treatment3==2
+
+restore
+
+
+*Appendix Table G5: Summary Statistics of Asynchronous Lectures
+preserve
+keep if lecture_type==0
+ sum male 
+ sum male if  treatment==1 
+ sum male if  treatment==2
+ sum male if  treatment==3
+ sum male if  treatment==4
+ sum male if  treatment2==1
+ sum male if  treatment3==2
+
+ sum first_gen 
+ sum first_gen if  treatment==1
+ sum first_gen if  treatment==2
+ sum first_gen if  treatment==3
+ sum first_gen if  treatment==4
+ sum first_gen if  treatment2==1
+ sum first_gen if  treatment3==2
+
+ tab race_num 
+ tab race_num if  treatment==1
+ tab race_num if  treatment==2
+ tab race_num if  treatment==3
+ tab race_num if  treatment==4
+ tab race_num if  treatment2==1
+ tab race_num if  treatment3==2
+
+ sum exam1score 
+ sum exam1score if  treatment==1
+ sum exam1score if  treatment==2
+ sum exam1score if  treatment==3
+ sum exam1score if  treatment==4
+ sum exam1score if  treatment2==1
+ sum exam1score if  treatment3==2
+
+restore
+
+*Appendix Table G6: Balance Tests: Sample Experiments 1 and 2
+reg male i.treatment  i.class
+reg first_gen i.treatment  i.class
+reg race_1 i.treatment  i.class
+reg race_2 i.treatment  i.class
+reg race_3 i.treatment  i.class
+reg race_4 i.treatment  i.class
+reg race_5 i.treatment  i.class
+reg student_letter i.treatment i.class
+reg high_school_grades i.treatment  i.class
+reg expect_letter i.treatment  i.class
+reg prior_economics i.treatment i.class
+
+reg male i.treatment2  i.class
+reg first_gen i.treatment2  i.class
+reg race_1 i.treatment2  i.class
+reg race_2 i.treatment2  i.class
+reg race_3 i.treatment2  i.class
+reg race_4 i.treatment2  i.class
+reg race_5 i.treatment2  i.class
+reg student_letter i.treatment2 i.class
+reg high_school_grades i.treatment2  i.class
+reg expect_letter i.treatment2  i.class
+reg prior_economics i.treatment2 i.class
+
+reg male i.treatment3  i.class
+reg first_gen i.treatment3  i.class
+reg race_1 i.treatment3  i.class
+reg race_2 i.treatment3  i.class
+reg race_3 i.treatment3  i.class
+reg race_4 i.treatment3  i.class
+reg race_5 i.treatment3  i.class
+reg student_letter i.treatment3 i.class
+reg high_school_grades i.treatment3  i.class
+reg expect_letter i.treatment3  i.class
+reg prior_economics i.treatment3 i.class
+
+
+*Appendix Table G7: Balance Tests: Sample Experiment 1
+reg male i.treatment  i.class if experiment==1
+reg first_gen i.treatment  i.class if experiment==1
+reg race_1 i.treatment  i.class if experiment==1
+reg race_2 i.treatment  i.class if experiment==1
+reg race_3 i.treatment  i.class if experiment==1
+reg race_4 i.treatment  i.class if experiment==1
+reg race_5 i.treatment  i.class if experiment==1
+reg student_letter i.treatment i.class if experiment==1
+reg high_school_grades i.treatment  i.class if experiment==1
+reg expect_letter i.treatment  i.class if experiment==1
+reg prior_economics i.treatment i.class if experiment==1
+
+reg male i.treatment2  i.class if experiment==1
+reg first_gen i.treatment2  i.class if experiment==1
+reg race_1 i.treatment2  i.class if experiment==1
+reg race_2 i.treatment2  i.class if experiment==1
+reg race_3 i.treatment2  i.class if experiment==1
+reg race_4 i.treatment2  i.class if experiment==1
+reg race_5 i.treatment2  i.class if experiment==1
+reg student_letter i.treatment2 i.class if experiment==1
+reg high_school_grades i.treatment2  i.class if experiment==1
+reg expect_letter i.treatment2  i.class if experiment==1
+reg prior_economics i.treatment2 i.class if experiment==1
+
+reg male i.treatment3  i.class if experiment==1
+reg first_gen i.treatment3  i.class if experiment==1
+reg race_1 i.treatment3  i.class if experiment==1
+reg race_2 i.treatment3  i.class if experiment==1
+reg race_3 i.treatment3  i.class if experiment==1
+reg race_4 i.treatment3  i.class if experiment==1
+reg race_5 i.treatment3  i.class if experiment==1
+reg student_letter i.treatment3 i.class if experiment==1
+reg high_school_grades i.treatment3  i.class if experiment==1
+reg expect_letter i.treatment3  i.class if experiment==1
+reg prior_economics i.treatment3 i.class if experiment==1
+
+
+
+*Appendix Table G8: Balance Tests: Sample Experiment 2
+reg male i.treatment  i.class if experiment==2
+reg first_gen i.treatment  i.class if experiment==2
+reg race_1 i.treatment  i.class if experiment==2
+reg race_2 i.treatment  i.class if experiment==2
+reg race_3 i.treatment  i.class if experiment==2
+reg race_4 i.treatment  i.class if experiment==2
+reg race_5 i.treatment  i.class if experiment==2
+reg student_letter i.treatment i.class if experiment==2
+reg high_school_grades i.treatment  i.class if experiment==2
+reg expect_letter i.treatment  i.class if experiment==2
+reg prior_economics i.treatment i.class if experiment==2
+
+reg male i.treatment2  i.class if experiment==2
+reg first_gen i.treatment2  i.class if experiment==2
+reg race_1 i.treatment2  i.class if experiment==2
+reg race_2 i.treatment2  i.class if experiment==2
+reg race_3 i.treatment2  i.class if experiment==2
+reg race_4 i.treatment2  i.class if experiment==2
+reg race_5 i.treatment2  i.class if experiment==2
+reg student_letter i.treatment2 i.class if experiment==2
+reg high_school_grades i.treatment2  i.class if experiment==2
+reg expect_letter i.treatment2  i.class if experiment==2
+reg prior_economics i.treatment2 i.class if experiment==2
+
+reg male i.treatment3  i.class if experiment==2
+reg first_gen i.treatment3  i.class if experiment==2
+reg race_1 i.treatment3  i.class if experiment==2
+reg race_2 i.treatment3  i.class if experiment==2
+reg race_3 i.treatment3  i.class if experiment==2
+reg race_4 i.treatment3  i.class if experiment==2
+reg race_5 i.treatment3  i.class if experiment==2
+reg student_letter i.treatment3 i.class if experiment==2
+reg high_school_grades i.treatment3  i.class if experiment==2
+reg expect_letter i.treatment3  i.class if experiment==2
+reg prior_economics i.treatment3 i.class if experiment==2
+
+
+
+*Appendix Table G9: Balance Tests: Sample Synchronous Classes
+reg male i.treatment  i.class if lecture_type==1
+reg first_gen i.treatment  i.class if lecture_type==1
+reg race_1 i.treatment  i.class if lecture_type==1
+reg race_2 i.treatment  i.class if lecture_type==1
+reg race_3 i.treatment  i.class if lecture_type==1
+reg race_4 i.treatment  i.class if lecture_type==1
+reg race_5 i.treatment  i.class if lecture_type==1
+reg student_letter i.treatment i.class if lecture_type==1
+reg high_school_grades i.treatment  i.class if lecture_type==1
+reg expect_letter i.treatment  i.class if lecture_type==1
+reg prior_economics i.treatment i.class if lecture_type==1
+
+reg male i.treatment2  i.class if lecture_type==1
+reg first_gen i.treatment2  i.class if lecture_type==1
+reg race_1 i.treatment2  i.class if lecture_type==1
+reg race_2 i.treatment2  i.class if lecture_type==1
+reg race_3 i.treatment2  i.class if lecture_type==1
+reg race_4 i.treatment2  i.class if lecture_type==1
+reg race_5 i.treatment2  i.class if lecture_type==1
+reg student_letter i.treatment2 i.class if lecture_type==1
+reg high_school_grades i.treatment2  i.class if lecture_type==1
+reg expect_letter i.treatment2  i.class if lecture_type==1
+reg prior_economics i.treatment2 i.class if lecture_type==1
+
+reg male i.treatment3  i.class if lecture_type==1
+reg first_gen i.treatment3  i.class if lecture_type==1
+reg race_1 i.treatment3  i.class if lecture_type==1
+reg race_2 i.treatment3  i.class if lecture_type==1
+reg race_3 i.treatment3  i.class if lecture_type==1
+reg race_4 i.treatment3  i.class if lecture_type==1
+reg race_5 i.treatment3  i.class if lecture_type==1
+reg student_letter i.treatment3 i.class if lecture_type==1
+reg high_school_grades i.treatment3  i.class if lecture_type==1
+reg expect_letter i.treatment3  i.class if lecture_type==1
+reg prior_economics i.treatment3 i.class if lecture_type==1
+
+
+
+*Appendix Table G10: Balance Tests: Sample Asynchronous Classes
+reg male i.treatment  i.class if lecture_type==0
+reg first_gen i.treatment  i.class if lecture_type==0
+reg race_1 i.treatment  i.class if lecture_type==0
+reg race_2 i.treatment  i.class if lecture_type==0
+reg race_3 i.treatment  i.class if lecture_type==0
+reg race_4 i.treatment  i.class if lecture_type==0
+reg race_5 i.treatment  i.class if lecture_type==0
+reg student_letter i.treatment i.class if lecture_type==0
+reg high_school_grades i.treatment  i.class if lecture_type==0
+reg expect_letter i.treatment  i.class if lecture_type==0
+reg prior_economics i.treatment i.class if lecture_type==0
+
+reg male i.treatment2  i.class if lecture_type==0
+reg first_gen i.treatment2  i.class if lecture_type==0
+reg race_1 i.treatment2  i.class if lecture_type==0
+reg race_2 i.treatment2  i.class if lecture_type==0
+reg race_3 i.treatment2  i.class if lecture_type==0
+reg race_4 i.treatment2  i.class if lecture_type==0
+reg race_5 i.treatment2  i.class if lecture_type==0
+reg student_letter i.treatment2 i.class if lecture_type==0
+reg high_school_grades i.treatment2  i.class if lecture_type==0
+reg expect_letter i.treatment2  i.class if lecture_type==0
+reg prior_economics i.treatment2 i.class if lecture_type==0
+
+reg male i.treatment3  i.class if lecture_type==0
+reg first_gen i.treatment3  i.class if lecture_type==0
+reg race_1 i.treatment3  i.class if lecture_type==0
+reg race_2 i.treatment3  i.class if lecture_type==0
+reg race_3 i.treatment3  i.class if lecture_type==0
+reg race_4 i.treatment3  i.class if lecture_type==0
+reg race_5 i.treatment3  i.class if lecture_type==0
+reg student_letter i.treatment3 i.class if lecture_type==0
+reg high_school_grades i.treatment3  i.class if lecture_type==0
+reg expect_letter i.treatment3  i.class if lecture_type==0
+reg prior_economics i.treatment3 i.class if lecture_type==0
+
+
+
+
+*Appendix Table G11: Baseline Empirical Model
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.race_num , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+
+xtreg nonexam_pass_only4  e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+
+
+*Appendix Table G12: Regression Results for First Generation and Continuing Generation Students: See Figure 1 Panel A & B code
+
+*Appendix Table G13: /FDR Sharpened Q-Values Corresponding to Coefficients Reported in Figure 1 and Table G12: See MHT do-file
+
+
+*Appendix Table G14: Effects of Feedback Message W1C on Course Final Grade by Experiment: See Figure 1 Panel C code
+
+
+*Appendix Table G15: FDR Sharpened Q-Values Corresponding to Coefficients Reported in Figure G1 and G14: See MHT do-file
+
+
+*Appendix Table G16: Differential Effects of Feedback Messages: Experiment 1: See Figure 2 code
+
+
+*Appendix Table G17: FDR Sharpened Q-Values Corresponding to Coefficients Reported in Figure 2 and Table G16: See MHT do-file
+
+
+*Appendix Table G18: Effects of Feedback Based on Level of Optimism - Experiments 1 and 2: See Figure 3 code
+
+
+*Appendix Table G19: FDR Sharpened Q-Values Corresponding to Coefficients Reported in Figure 3 and Table G18: See MHT do-file
+
+
+*Appendix Table G20: Regression Results Based on Level of Optimism - Experiment 1 (Code for Figure G3 Panels A and B)
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_midterm_e1
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Overoptimistic_grade_e1
+
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_midterm_e1
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_ps_e1
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Pessimistic_grade_e1
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==1, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_ps_e1
+
+
+
+
+*Appendix Table G21: Regression Results Based on Level of Optimism - Experiment 2 (And Figure G3 Panels C and D)
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_midterm_e2
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Overoptimistic_grade_e2
+
+xtreg e2_std e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_midterm_e2
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance<actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Overoptimistic_ps_e2
+
+xtreg sd_finalscore e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3  i.treatment2 i.treatment3 i.race_num  if  (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store Pessimistic_grade_e2
+
+xtreg nonexam_pass_only4 e1_std male T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 i.treatment2 i.treatment3  i.race_num  if (expected_relative_performance>=actual_relative_performance) & lecture_type==1 & experiment==2, vce(bootstrap, strata(experiment) seed(200) rep(200)) fe
+estimate store Pessimistic_ps_e2
+
+*End of Appendix Tables
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Appendix Figures
+
+*Appendix Figure G1 - Effects of Feedback Message W1C on Students' Outcomes 
+*Appendix Figure G1 Panel A: Male Students
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2  i.race_num  if  male==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  male==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3  i.race_num if  male==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+*Appendix Figure G1 Panel B: Female Students
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2  i.race_num  if  male==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  male==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3  i.race_num if  male==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+*Appendix Figure G1 Panel C: Business Students
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2  i.race_num  if  major_business==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  major_business==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3  i.race_num if  major_business==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+*Appendix Figure G1 Panel D: Non-Business Students
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2  i.race_num  if  major_business==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  major_business==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male major_business RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3  i.race_num if  major_business==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+
+
+
+*Appendix Figure G2: Treatment Effect by Instruction Mode: Experiments 1 and 2
+*Panel A: Synchronous Classes
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.race_num if  RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if RL==1, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T1 || T2 || T3 || FGxT1 || FGxT2 || FGxT3)   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.0000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+*Panel B: Asynchronous Classes
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.race_num if RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male  i.treatment2 i.treatment3 i.race_num if RL==0, vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T1 || T2 || T3 || FGxT1 || FGxT2 || FGxT3)   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.0000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 

@@ -1,0 +1,55 @@
+*Figure 1: Effects of Feedback Message W1C on Students' Outcomes (Also Appendix Table G12)
+*Panel A: First-Generation Students
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2  i.race_num  if  first_gen==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  first_gen==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4 e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3  i.race_num if  first_gen==1 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+*Panel B: Continuing-Generation Student (Also Appendix Table G12)
+xtreg e2_std e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.race_num  if  first_gen==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store Midterm
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  first_gen==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store CourseGrade
+
+xtreg nonexam_pass_only4  e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num if  first_gen==0 , vce(bootstrap, strata(experiment) seed(151) rep(200)) fe
+estimate store ProblemSets
+
+coefplot Midterm CourseGrade ProblemSets, keep(T3 || T3xRL  )   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
+
+
+*Panel C: Full Experiment (Also Appendix G14)
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store CourseGrade_Exp1_and_Exp2
+lincom T3+FGxT3+T3xRL+FGxT3xRL
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num  if experiment==1, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store CourseGrade_Exp1
+lincom T3+FGxT3+T3xRL+FGxT3xRL
+
+xtreg sd_finalscore e1_std T1 T2 T3 first_gen FGxT1 FGxT2 FGxT3 male RL FGxRL T1xRL T2xRL T3xRL FGxT1xRL FGxT2xRL FGxT3xRL i.treatment2 i.treatment3 i.race_num  if experiment==2, vce(bootstrap, strata(experiment) seed(101) rep(200)) fe
+estimate store CourseGrade_Exp2
+lincom T3+FGxT3+T3xRL+FGxT3xRL
+
+coefplot CourseGrade_Exp1_and_Exp2 CourseGrade_Exp1 CourseGrade_Exp2, keep(T3 || FGxT3 || T3xRL ||  FGxT3xRL)   xline(0) ///
+         ci(95) citop   ///
+		  mlabel(cond(@pval<.01, string( @b,"%9.3f") + "***", ///
+cond(@pval<.05, string(@b,"%9.3f") + "**", ///
+cond(@pval<.00000001, string(@b,"%9.3f") + "*", ///
+string(@b,"%9.3f")))))  mlabcolor(black) mlabpos(12)  mlabel(@b) 
